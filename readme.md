@@ -1,0 +1,43 @@
+# MixSim
+
+This is a basic 3D simulation of a three-paddle dry mixer.
+Such mixers are commonly used in the chemical, pharmaceutical and food industries to blend powders and particulates.
+
+The simulation was primarily created to accompany a corresponding physical model in a research laboratory.
+A secondary motivation was to investigate Babylon.js as an alternative to Sketchfab for creating interactive 3D scenes for teaching and research.
+In addition, I wanted to get more familiar with TypeScript development.
+
+## Implementation
+
+The simulation is implemented using TypeScript and the Babylon.js 3D engine.
+The main scene consists of a horizontal, cylindrical chamber.
+In the chamber, two particle populations are being mixed.
+Particles collide with each other, the paddles and the chamber walls.
+Classes of particles are coloured according to their size (small, medium, large).
+A main camera can be moved to inspect the simulation.
+An inset camera can be used to observe a top-down view of the mixing behaviour.
+A slider allows users to control the mixing speed in the chamber.
+
+## Limitations
+
+The geometrical modelling was done using Babylon.js primitives (cylinders, boxes, spheres) and Boolean operations (union, subtraction).
+As no dedicated modelling software was used (e.g., Blender), the designs are rudimentary in nature.
+
+An array of invisible "backup" collision impostors extends around the central chamber to prevent particles escaping the main chamber — this is not perfect (particles may occasionally escape) and probably not performant either.
+Occasionally a few particles still escape and the collision detection needs to be improved.
+
+There are ~100 particles (with their own physics) being simulated and this may cause some frame-rate drops depending on your hardware.
+In my most recent tests (browsers: Firefox, computer: Lenovo Thinkpad) the frame-rate averaged 60-80 FPS with no noticeable dips.
+It would be good to have an option for the user to adjust the number of particles for this reason.
+
+## Plans
+
+- More detailed modelling (e.g., better motor, steel textures)
+- Add clickable/expandable annotations for different elements
+- Establish some link with physical model (i.e., QR code) in laboratory
+- Add more interactive elements (e.g., adjust particle numbers)
+- Create other simulation "spokes" and link together in hub
+- Refactor code for style consistency and less redundancy
+- Add Loading screen
+- Add license
+- Add links to readme
