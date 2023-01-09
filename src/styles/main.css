@@ -12,18 +12,18 @@ canvas {
 }
 
 img {
-  position: absolute;
+  position: fixed;
   width: 20px;
-  margin-top: 95vh;
-  margin-left: 95vw;
+  bottom: 5%;
+  right: 5%;
   cursor: pointer;
 }
 
 img:hover {
-  position: absolute;
+  position: fixed;
   width: 22px;
-  margin-top: 95vh;
-  margin-left: 95vw;
+  bottom: 5%;
+  right: 5%;
   cursor: pointer;
 }
 
@@ -32,9 +32,9 @@ img:hover {
 }
 
 #about {
-  position: absolute;
-  margin-top: 95vh;
-  margin-left: 1%;
+  position: fixed;
+  bottom: 5%;
+  left: 4%;
   font-family: Tahoma, sans-serif;
   text-align: center;
   text-decoration: none;
