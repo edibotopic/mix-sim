@@ -31,7 +31,7 @@ To _test_ the simulation run `npm run dev` or to _build_ run
 
 The simulation was based on the physical model shown below.
 This was constructed using cheap electrical components,
-repurposed metal and carboard, along with 3D-printed paddles:
+repurposed metal and cardboard, along with 3D-printed paddles:
 
 ![photo of physical model](./img/model.jpg) 
 
